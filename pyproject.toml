@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "backend"
+version = "0.1.0"
+description = "Template project for a fastApi backend"
+authors = ["Robert-George Crupa <JoBlow@example.com>"]
+readme = "README.md"
+
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = {extras = ["all"], version = "^0.103.1"}
+sqlalchemy = "^2.0.20"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.1"
+pre-commit = "^3.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
