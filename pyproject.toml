@@ -15,6 +15,7 @@ sqlalchemy = "^2.0.20"
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.1"
 pre-commit = "^3.4.0"
+mongoengine = "^0.24.2"
 
 [build-system]
 requires = ["poetry-core"]
