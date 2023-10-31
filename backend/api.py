@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from pathlib import Path
 from typing import List
 
 from fastapi import Body
@@ -10,14 +9,11 @@ from fastapi import status
 from fastapi.encoders import jsonable_encoder
 from fastapi.responses import JSONResponse
 from fastapi.responses import Response
-
-from .mongoDb import db
-from .mongoDb.models import Book
-from .mongoDb.models import UpdateBookModel
+from mongoDb import db
+from mongoDb.models import Book
+from mongoDb.models import UpdateBookModel
 
 app = FastAPI()
-
-PROJECT_ROOT = Path(__file__).parent.parent
 
 
 @app.get(

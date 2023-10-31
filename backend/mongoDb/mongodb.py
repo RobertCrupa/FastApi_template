@@ -2,10 +2,15 @@ from __future__ import annotations
 
 import os
 
+import certifi
 import motor.motor_asyncio
 
+ca = certifi.where
+
 # Create a new client and connect to the server
-client = motor.motor_asyncio.AsyncIOMotorClient(os.environ['MONGODB_URI'])
+client = motor.motor_asyncio.AsyncIOMotorClient(
+    os.environ['MONGODB_URI'], tlsCAFile=ca,
+)
 db = client.book
 
 
