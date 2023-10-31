@@ -10,6 +10,8 @@ readme = "README.md"
 python = "^3.10"
 fastapi = {extras = ["all"], version = "^0.103.1"}
 sqlalchemy = "^2.0.20"
+pymongo = "^4.5.0"
+motor = "^3.3.1"
 
 
 [tool.poetry.group.dev.dependencies]
